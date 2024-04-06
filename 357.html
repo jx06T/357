@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>357</title>
+  <link href="357.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="initial()">
+  <div id="S">
+    <select class="else setD">
+      <option value=0>幼稚園</option>
+      <option value=20>簡單</option>
+      <option value=40 selected>正常</option>
+      <option value=70>難</option>
+      <option value=100>不可能</option>
+    </select>
+    <select class="else setF">
+      <option value=false>後下</option>
+      <option value=true>先下</option>
+    </select>
+    <select class="else setN">
+      <option value="false">misère(拿最後一個輸)</option>
+      <option value="true">normal(拿最後一個贏)</option>
+    </select>
+    <button class="else" onclick="initial()">again</button>
+  </div>
+  <hr>
+  <div id="A">
+    <table id="t1">
+      <tr>
+        <td onclick="down(0,0)" id="0">O</td>
+        <td onclick="down(0,1)" id="1">Ø</td>
+        <td onclick="down(0,2)" id="2">O</td>
+      </tr>
+    </table>
+    <table id="t2">
+      <tr>
+        <td onclick="down(1,0)" id="10">O</td>
+        <td onclick="down(1,1)" id="11">O</td>
+        <td onclick="down(1,2)" id="12">O</td>
+        <td onclick="down(1,3)" id="13">Ø</td>
+        <td onclick="down(1,4)" id="14">O</td>
+      </tr>
+    </table>
+    <table id="t3">
+      <tr>
+        <td onclick="down(2,0)" id="20">O</td>
+        <td onclick="down(2,1)" id="21">O</td>
+        <td onclick="down(2,2)" id="22">O</td>
+        <td onclick="down(2,3)" id="23">O</td>
+        <td onclick="down(2,4)" id="24">O</td>
+        <td onclick="down(2,5)" id="25">O</td>
+        <td onclick="down(2,6)" id="26">O</td>
+      </tr>
+    </table>
+
+  </div>
+  <div id="c">
+    <button onclick="check()" id="check">check</bueele>
+  </div>
+  <hr>
+  <div id="TT">
+    <p>
+      一次可以劃掉一排中任意數量"連續"的圓圈，選擇完畢按check
+      <br>
+      劃掉的不能再劃，劃掉最後一顆輸(misère)或沒東西劃的輸(normal)
+      <br>
+      上方選擇難度、先後手、模式等等。
+    </p>
+  </div>
+  <script src="357.js"></script>
+
+
+</body>
+
+</html>
